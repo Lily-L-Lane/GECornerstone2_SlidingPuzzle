@@ -1,0 +1,50 @@
+/**
+* Sliding puzzle title in CSS
+*/
+.puzzle-title-container {
+  position: relative;
+  width: 633px;
+  height: 230px;
+}
+
+.puzzle-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.puzzle-title-text {
+  position: absolute;
+  left: 77px;
+  top: 20px;
+  width: 462px;
+  font-family: "Pixelify Sans", cursive;
+  font-size: 45px;
+  color: #000;
+  line-height: 1.2;
+}
+
+@media (max-width: 991px) {
+  .puzzle-title-container {
+    width: 100%;
+    height: auto;
+    max-width: 633px;
+  }
+
+  .puzzle-background {
+    height: auto;
+  }
+
+  .puzzle-title-text {
+    font-size: 35px;
+    left: 5%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+  .puzzle-title-text {
+    font-size: 28px;
+    top: 15px;
+  }
+}
