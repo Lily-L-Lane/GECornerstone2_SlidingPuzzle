@@ -30,24 +30,20 @@
 
 .image-container {
   position: relative;
-  display: inline-block;
-}
-
-.image-container img {
   display: block;
   width: 100%;
-  height: auto;
+  max-width: 633px;
+  margin: 0 auto;
 }
 
 .text-bubble {
   position: absolute;
-  top: 30%; /* Adjust as needed */
-  left: 50%; /* Adjust as needed */
+  top: 30%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  position: absolute;
-width: 633px;
-height: 229.5px;
-  background-image: url('text-bubble-ge.png');
+  width: 633px;
+  height: 229.5px;
+  background-image: url('Images/text-bubble-ge.png');
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px;
