@@ -66,26 +66,7 @@
   padding: 262px 80px 163px;
   align-items: center;
   overflow: hidden;
-  /* background-color: #f5f5f5; */ /* Remove or comment this line */
-  background: transparent; /* Add this to ensure transparency */
-}
-
-/* Background for login.html */
-.login-page {
-  background-image: url('Images/GEdesktopA.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-/* Background for loginB.html */
-.loginB-page {
-  background-image: url('Images/GEdesktopB.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: transparent;
 }
 
 
@@ -98,6 +79,27 @@
   margin-bottom: 79px;
   font-family: "Pixelify Sans", cursive;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Optional: adds a subtle glow */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.login-page {
+  background-image: url('Images/GEdesktopA.webp');
+}
+
+.loginB-page {
+  background-image: url('Images/GEdesktopB.jpg');
 }
 
 
