@@ -25,28 +25,35 @@
   font-family: "Pixelify Sans", cursive;
   font-size: 45px;
   color: #000;
-  line-height: 1.2;
+  line-height: 1.5;
+  overflow: visible;
+  padding-bottom: 10px;
 }
 
 .image-container {
   position: relative;
   display: block;
   width: 100%;
+  min-height: 250px;
+  height: auto;
   max-width: 633px;
   margin: 0 auto;
 }
 
 .text-bubble {
   position: absolute;
-  top: 30%;
+  top: 65%;
+  padding-top: 60px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 633px;
-  height: 229.5px;
-  background-image: url('Images/text-bubble-ge.png');
+  min-width: 633px;
+  width: auto;
+  min-height: 229.5px;
+  height: auto;
+  background-image: url('images/text-bubble-ge.png');
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 

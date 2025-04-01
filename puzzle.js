@@ -21,7 +21,7 @@ const puzzlePieces = [
   new PuzzlePiece(0, 3, 2, false, "#B9FBC0"), // Light green vertical top-middle
   new PuzzlePiece(0, 0, 3, true, "#ADD8E6"), // Blue horizontal top-left
   new PuzzlePiece(2, 0, 2, false, "#A3C4F3"), // Pink vertical middle-left
-  new PuzzlePiece(2, 3, 2, false, "#87CEEB"), // Light blue vertical middle-right
+  new PuzzlePiece(4, 2, 2, false, "#87CEEB"), // Light blue vertical middle-right
   new PuzzlePiece(3, 1, 2, true, "#90EE90"), // Light green horizontal middle
   new PuzzlePiece(4, 0, 2, true, "#8EECF5"), // horizontal bottom-left
   new PuzzlePiece(4, 4, 2, true, "#98F5E1"), // horizontal bottom-middle
@@ -178,13 +178,14 @@ function startDrag(e, piece, element) {
       piece.col = newCol;
       updatePiecePosition(piece);
 
-      // Check if the red car has reached the exit
-      if (piece.isRedCar && piece.col + piece.length >= BOARD_SIZE) {
+      // Check if the pink bar has reached the exit
+    if (piece.isPink && piece.col + piece.length >= BOARD_SIZE) {
         setTimeout(() => {
           alert(`Congratulations! You solved the puzzle in ${turns} moves.`);
+          window.location.href = "solPage.html";
         }, 100);
-      }
     }
+}
   }
 
   function stopDrag() {
