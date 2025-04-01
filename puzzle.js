@@ -17,15 +17,15 @@ class PuzzlePiece {
 
 const puzzlePieces = [
   new PuzzlePiece(2, 1, 2, true, "#F1C0E8"), // pink bar (escape bar)
-  new PuzzlePiece(0, 4, 2, true, "#90DBF4"), // Light blue horizontal top-right
-  new PuzzlePiece(0, 3, 2, false, "#B9FBC0"), // Light green vertical top-middle
-  new PuzzlePiece(0, 0, 3, true, "#ADD8E6"), // Blue horizontal top-left
-  new PuzzlePiece(2, 0, 2, false, "#A3C4F3"), // Pink vertical middle-left
-  new PuzzlePiece(4, 2, 2, false, "#87CEEB"), // Light blue vertical middle-right
-  new PuzzlePiece(3, 1, 2, true, "#90EE90"), // Light green horizontal middle
-  new PuzzlePiece(4, 0, 2, true, "#8EECF5"), // horizontal bottom-left
-  new PuzzlePiece(4, 4, 2, true, "#98F5E1"), // horizontal bottom-middle
-  new PuzzlePiece(1, 5, 3, false, "#20B2AA"), // Light sea green vertical right
+//  new PuzzlePiece(1, 2, 2, false, "#A3C4F3"), // Pink vertical middle-left
+  new PuzzlePiece(0, 1, 2, true, "#90DBF4"), // Light blue horizontal top-right
+  new PuzzlePiece(1, 3, 3, false, "#B9FBC0"), // Light green vertical top-middle
+  new PuzzlePiece(0, 0, 3, false, "#ADD8E6"), // Blue horizontal top-left
+  new PuzzlePiece(4, 1, 2, true, "#87CEEB"), // Light blue vertical middle-right
+//   new PuzzlePiece(3, 1, 2, true, "#90EE90"), // Light green horizontal middle
+  new PuzzlePiece(3, 0, 2, false, "#8EECF5"), // horizontal bottom-left
+  new PuzzlePiece(5, 2, 3, true, "#98F5E1"), // horizontal bottom-middle
+  new PuzzlePiece(3, 5, 3, false, "#90EE90"), // Light sea green vertical right
 ];
 
 // Mark the red car
