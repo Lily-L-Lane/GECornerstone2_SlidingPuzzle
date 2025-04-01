@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Game Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="loginB-page"></body>
+    <div class="login-container">
+      <div class="login-content">
+        <h1 class="login-title">This is extra security protocol</h1>
+        <div class="login-form">
+          <div class="input-group">
+            <label class="input-label">Username</label>
+            <input
+              type="text"
+              id="username"
+              class="login-input"
+              placeholder="Enter username"
+              aria-label="Username input"
+            />
+          </div>
+          <div class="input-group">
+            <label class="input-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="login-input"
+              placeholder="Enter password"
+              aria-label="Password input"
+            />
+          </div>
+          <div class="error-message" id="error-message">
+            Incorrect username or password!
+          </div>
+          <div class="button-group">
+            <button id="submit" class="login-button">Sign In</button>
+          </div>
+          <div class="forgot-password">Forgot password?</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("submit")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          var errorMessage = document.getElementById("error-message");
+
+          if (username === "admin" && password === "gamepass") {
+            window.location.href = "index.html";
+          } else {
+            errorMessage.style.display = "block";
+          }
+        });
+
+      document.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          document.getElementById("submit").click();
+        }
+      });
+    </script>
+  </body>
+</html>
