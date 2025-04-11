@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warning</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: "Images/GEdesktopA.webp";
+        font-family: 'Pixelify Sans', cursive;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .warning-container {
+        text-align: center;
+        max-width: 80%;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .puzzle-title-text {
+        color: #FF0000;
+        margin-bottom: 30px;
+        font-size: 45px;
+      }
+      
+      #continue {
+        background-color: #2c2c2c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 12px 30px;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: 'Pixelify Sans', cursive;
+        transition: background-color 0.3s;
+      }
+      
+      #continue:hover {
+        background-color: #444444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="warning-container">
+      <h1 class="puzzle-title-text">Warning! The file that you want to view is corrupted. View anyway?</h1>
+      <button id="continue">Continue</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("continue")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "solPage.html";
+        });
+
+      document.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          document.getElementById("continue").click();
+        }
+      });
+    </script>
+  </body>
+</html>

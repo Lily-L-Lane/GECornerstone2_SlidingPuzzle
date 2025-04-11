@@ -16,17 +16,20 @@ class PuzzlePiece {
 }
 
 const puzzlePieces = [
-  new PuzzlePiece(2, 1, 2, true, "#F1C0E8"), // pink bar (escape bar)
-//  new PuzzlePiece(1, 2, 2, false, "#A3C4F3"), // Pink vertical middle-left
-  new PuzzlePiece(0, 1, 2, true, "#90DBF4"), // Light blue horizontal top-right
-  new PuzzlePiece(1, 3, 3, false, "#B9FBC0"), // Light green vertical top-middle
-  new PuzzlePiece(0, 0, 3, false, "#ADD8E6"), // Blue horizontal top-left
-  new PuzzlePiece(4, 1, 2, true, "#87CEEB"), // Light blue vertical middle-right
-//   new PuzzlePiece(3, 1, 2, true, "#90EE90"), // Light green horizontal middle
-  new PuzzlePiece(3, 0, 2, false, "#8EECF5"), // horizontal bottom-left
-  new PuzzlePiece(5, 2, 3, true, "#98F5E1"), // horizontal bottom-middle
-  new PuzzlePiece(3, 5, 3, false, "#90EE90"), // Light sea green vertical right
+  new PuzzlePiece(2, 1, 2, true, "#F1C0E8"),  // Pink horizontal bar (escape bar) in the middle-left
+  new PuzzlePiece(0, 1, 2, false, "#e0d6ff"), // Light lavender vertical piece in the top-left
+  new PuzzlePiece(0, 2, 2, true, "#C7D7F3"),  // Light periwinkle horizontal piece in the top-middle
+  new PuzzlePiece(0, 4, 2, true, "#ADD8E6"),  // Light blue horizontal piece in the top-right
+  new PuzzlePiece(3, 3, 2, true, "#98F5E1"),  // Mint green horizontal piece in the middle-right
+  new PuzzlePiece(3, 1, 2, true, "#B4D2F5"),  // Light blue horizontal piece in the middle-left
+  new PuzzlePiece(1, 0, 3, false, "#CAD4FA"), // Light blue-gray vertical piece on the left edge
+  new PuzzlePiece(5, 0, 2, true, "#8EECF5"),  // Cyan horizontal piece in the bottom-left
+  new PuzzlePiece(4, 2, 2, false, "#A6E4EB"), // Light turquoise vertical piece in the bottom-middle
+  new PuzzlePiece(4, 3, 2, false, "#9FF7D2"), // Light seafoam green vertical piece in the bottom-right
+  new PuzzlePiece(4, 4, 2, true, "#A5F8C3"),  // Light lime green horizontal piece in the bottom-right
+  new PuzzlePiece(1, 5, 3, false, "#B2FBA5"), // Light green vertical piece on the right edge
 ];
+
 
 // Mark the red car
 puzzlePieces[0].isPink = true;
@@ -181,8 +184,9 @@ function startDrag(e, piece, element) {
       // Check if the pink bar has reached the exit
     if (piece.isPink && piece.col + piece.length >= BOARD_SIZE) {
         setTimeout(() => {
-          alert(`Congratulations! You solved the puzzle in ${turns} moves.`);
-          window.location.href = "solPage.html";
+          alert(`Congratulations! You solved the puzzle in ${turns} moves. Continually press enter or click ok to continue`);
+          window.location.href = "errorPage.html";
+
         }, 100);
     }
 }
