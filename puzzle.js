@@ -2,7 +2,7 @@ var curTile = null;
 var turns = 0;
 
 const BOARD_SIZE = 6;
-const CELL_SIZE = 50; // in pixels
+const CELL_SIZE = 50;
 
 class PuzzlePiece {
   constructor(row, col, length, isHorizontal, color) {
@@ -186,7 +186,6 @@ function startDrag(e, piece, element) {
         setTimeout(() => {
           alert(`Congratulations! You solved the puzzle in ${turns} moves. Continually press enter or click ok to continue`);
           window.location.href = "errorPage.html";
-
         }, 100);
     }
 }
